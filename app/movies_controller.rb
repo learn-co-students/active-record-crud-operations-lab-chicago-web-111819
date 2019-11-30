@@ -67,16 +67,16 @@ end
 def can_be_found_updated_and_saved
   # Updtate the title "Awesome Flick" to "Even Awesomer Flick", save it, then return it
   Movie.create(title: "Awesome Flick")
-  mv = Movie.find_by title: "Awesome Flick"
-  mv.title = "Even Awesomer Flick"
-  mv.save
+  movie = Movie.find_by title: "Awesome Flick"
+  movie.title = "Even Awesomer Flick"
+  movie.save
 end
 
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
-  mv = Movie.find_by(title: "Wat?")
-  mv.update(title: "Wat, huh?")
+  movie = Movie.find_by(title: "Wat?")
+  movie.update(title: "Wat, huh?")
 end
 
 def can_update_multiple_items_at_once
@@ -89,8 +89,8 @@ end
 
 def can_destroy_a_single_item
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
-  mv = Movie.find_by title: "That One Where the Guy Kicks Another Guy Once"
-  mv.destroy
+  movie = Movie.find_by title: "That One Where the Guy Kicks Another Guy Once"
+  movie.destroy
 end
 
 def can_destroy_all_items_at_once
